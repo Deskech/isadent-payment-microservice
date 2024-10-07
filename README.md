@@ -13,7 +13,7 @@ This microservice is responsible for recording new payments via a POST request, 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/
+   git clone https://github.com/Deskech/isadent-payment-microservice
 ## Prerequisites
 - **Java 17**
 - **Maven**
