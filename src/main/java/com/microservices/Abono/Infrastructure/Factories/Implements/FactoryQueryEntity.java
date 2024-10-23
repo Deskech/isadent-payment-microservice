@@ -4,6 +4,7 @@ import com.microservices.Abono.Domain.Model.CommandLine.Payment;
 import com.microservices.Abono.Infrastructure.Entities.Query.QueryPaymentEntity;
 import com.microservices.Abono.Infrastructure.Factories.Interfaces.FactoryQueryPaymentEntity;
 import org.springframework.stereotype.Component;
+
 /**
  * Factory implementation for creating QueryPaymentEntity objects from Payment data.
  * This component is responsible for converting payment objects into query entities for database operations.

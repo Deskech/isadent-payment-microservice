@@ -20,7 +20,7 @@ import java.time.LocalDate;
 @Getter
 public class QueryPaymentEntity {
     @Id
-    @Column (name = "factura_id")
+    @Column(name = "factura_id")
     private long paymentId;
     @Column(name = "paciente_nombre")
     private String patientName;

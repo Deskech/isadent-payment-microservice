@@ -1,4 +1,4 @@
-package com.microservices.Abono.Infrastructure.Events.Publicados;
+package com.microservices.Abono.Infrastructure.Events.Published;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

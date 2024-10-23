@@ -8,6 +8,7 @@ import com.microservices.Abono.Infrastructure.Services.Currency;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+
 /**
  * This class creates Payment objects from NewPayment data.
  * It prepares all the necessary information for creating a Payment.
@@ -15,9 +16,11 @@ import java.time.LocalDate;
 @Component
 public class PaymentFactoryImpl implements PaymentFactory<NewPayment> {
     private final Currency currency;
-    public PaymentFactoryImpl(Currency currency){
-        this.currency= currency;
+
+    public PaymentFactoryImpl(Currency currency) {
+        this.currency = currency;
     }
+
     /**
      * Converts a NewPayment object that contains patient's name and payment amount into a Payment object.
      *

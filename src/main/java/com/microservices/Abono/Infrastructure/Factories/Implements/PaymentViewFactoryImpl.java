@@ -4,6 +4,7 @@ import com.microservices.Abono.Domain.Factories.PaymentViewFactory;
 import com.microservices.Abono.Domain.Model.Query.PaymentView;
 import com.microservices.Abono.Infrastructure.Entities.Query.QueryPaymentEntity;
 import org.springframework.stereotype.Component;
+
 /**
  * This class creates PaymentView objects from QueryPaymentEntity data.
  * It transforms data from the database into a format suitable for displaying payment information.

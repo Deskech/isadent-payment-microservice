@@ -6,12 +6,12 @@ import com.microservices.Abono.Domain.Factories.PaymentFactory;
 import com.microservices.Abono.Domain.Model.CommandLine.Payment;
 import com.microservices.Abono.Domain.Repositories.CommandLine.PaymentRepository;
 import com.microservices.Abono.Domain.Services.SavePayment;
-import com.microservices.Abono.Infrastructure.Events.Publicados.NewPaymentSaved;
+import com.microservices.Abono.Infrastructure.Events.Published.NewPaymentSaved;
 import org.springframework.stereotype.Component;
+
 /**
  * Implementation of the SavePayment interface for handling payment registrations.
  * This class saves both first-time and subsequent payments, interacting with different layers such as factories and repositories.
- *
  */
 @Component
 public class SavePaymentImpl implements SavePayment<NewPayment> {
@@ -19,14 +19,16 @@ public class SavePaymentImpl implements SavePayment<NewPayment> {
     private final PaymentRepository<Payment> paymentRepository;
     private final NewPaymentSaved newPaymentSaved;
     private final LastPayment<NewPayment> lastPayment;
+
     public SavePaymentImpl(PaymentFactory<NewPayment> paymentFactory, PaymentRepository<Payment> paymentRepository, NewPaymentSaved newPaymentSaved,
                            LastPayment<NewPayment> lastPayment
-                            ) {
+    ) {
         this.paymentFactory = paymentFactory;
         this.paymentRepository = paymentRepository;
         this.newPaymentSaved = newPaymentSaved;
         this.lastPayment = lastPayment;
     }
+
     /**
      * Saves a new payment by creating a payment entity, registering it, and reporting it.
      *
@@ -45,6 +47,7 @@ public class SavePaymentImpl implements SavePayment<NewPayment> {
         }
 
     }
+
     /**
      * Saves the first payment for a patient by creating a payment entity and registering it as a first-time payment.
      *

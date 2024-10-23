@@ -12,8 +12,8 @@ import java.util.List;
  * Retrieves a payment history
  */
 @Repository
-public interface QueryAbonoRepository extends JpaRepository<QueryPaymentEntity,Long> {
+public interface QueryAbonoRepository extends JpaRepository<QueryPaymentEntity, Long> {
 
     @Query("select f from QueryPaymentEntity f where f.patientName= :patientName")
-    List<QueryPaymentEntity> showPayment(@Param("patientName")String patientName);
+    List<QueryPaymentEntity> showPayment(@Param("patientName") String patientName);
 }

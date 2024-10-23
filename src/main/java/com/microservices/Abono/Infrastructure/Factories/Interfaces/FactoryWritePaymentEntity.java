@@ -1,6 +1,7 @@
 package com.microservices.Abono.Infrastructure.Factories.Interfaces;
 
 import com.microservices.Abono.Infrastructure.Entities.CommandLine.WritePaymentEntity;
+
 /**
  * This interface creates WritePaymentEntity objects from different types of payment data.
  *

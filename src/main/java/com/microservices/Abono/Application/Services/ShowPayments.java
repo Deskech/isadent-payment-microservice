@@ -23,7 +23,7 @@ public class ShowPayments {
      * @param patientName The name of the patient whose payment history is requested.
      * @return A list of PaymentView objects representing the patient's payment history.
      */
-    public List<PaymentView>porNombrePaciente(String patientName) {
+    public List<PaymentView> getPaymentsByPatientName(String patientName) {
         return paymentViewService.viewPaymentHistory(patientName);
     }
 }

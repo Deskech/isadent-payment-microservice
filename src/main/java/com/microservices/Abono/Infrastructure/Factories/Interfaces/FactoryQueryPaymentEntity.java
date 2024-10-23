@@ -1,6 +1,7 @@
 package com.microservices.Abono.Infrastructure.Factories.Interfaces;
 
 import com.microservices.Abono.Infrastructure.Entities.Query.QueryPaymentEntity;
+
 /**
  * This interface creates QueryPaymentEntity objects from different types of payment data.
  *

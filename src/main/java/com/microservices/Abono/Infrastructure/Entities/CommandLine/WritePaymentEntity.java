@@ -1,10 +1,14 @@
 package com.microservices.Abono.Infrastructure.Entities.CommandLine;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+
 /**
  * Entity class representing a payment record in the database.
  * This class is mapped to the "writeAbonos" table and contains fields for payment details.

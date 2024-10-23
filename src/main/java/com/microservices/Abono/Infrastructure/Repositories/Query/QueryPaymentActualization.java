@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * Saves the events comming from the command line database.
  */
 @Repository
-public interface QueryPaymentActualization extends JpaRepository<QueryPaymentEntity,Long> {
+public interface QueryPaymentActualization extends JpaRepository<QueryPaymentEntity, Long> {
 
 
 }

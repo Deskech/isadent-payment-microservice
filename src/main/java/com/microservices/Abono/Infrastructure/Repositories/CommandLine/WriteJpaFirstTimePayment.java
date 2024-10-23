@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * Stores the first patient's payment in the command line database.
  */
 @Repository
-public interface WriteJpaFirstTimePayment extends JpaRepository<WritePaymentEntity,Long> {
+public interface WriteJpaFirstTimePayment extends JpaRepository<WritePaymentEntity, Long> {
 }

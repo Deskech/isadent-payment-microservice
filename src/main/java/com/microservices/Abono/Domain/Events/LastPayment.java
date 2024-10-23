@@ -1,4 +1,5 @@
 package com.microservices.Abono.Domain.Events;
+
 /**
  * Interface for reporting the last payment to the bill microservice.
  * This interface defines a method to send the last payment information.

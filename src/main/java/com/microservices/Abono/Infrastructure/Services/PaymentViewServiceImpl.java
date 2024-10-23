@@ -6,6 +6,7 @@ import com.microservices.Abono.Domain.Services.PaymentViewService;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+
 /**
  * Service implementation for viewing the payment history of a patient.
  * This class interacts with the PaymentViewRepository to retrieve the payment history.
@@ -14,9 +15,10 @@ import java.util.List;
 public class PaymentViewServiceImpl implements PaymentViewService {
     private final PaymentViewRepository paymentViewRepository;
 
-    public PaymentViewServiceImpl(PaymentViewRepository paymentViewRepository){
+    public PaymentViewServiceImpl(PaymentViewRepository paymentViewRepository) {
         this.paymentViewRepository = paymentViewRepository;
     }
+
     /**
      * Retrieves the payment history for a given patient by delegating the call to the repository.
      *

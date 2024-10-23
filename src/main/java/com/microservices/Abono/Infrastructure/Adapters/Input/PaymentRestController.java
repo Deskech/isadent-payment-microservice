@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
 /**
  * REST controller for managing payment transactions.
  * This controller handles requests related to saving new payments and retrieving payment history.
@@ -20,10 +21,12 @@ public class PaymentRestController {
 
     private final SavePayments savePayments;
     private final ShowPayments showPayments;
-    public PaymentRestController(SavePayments savePayments, ShowPayments showPayments){
+
+    public PaymentRestController(SavePayments savePayments, ShowPayments showPayments) {
         this.savePayments = savePayments;
         this.showPayments = showPayments;
     }
+
     /**
      * Saves a new payment.
      *
@@ -31,7 +34,7 @@ public class PaymentRestController {
      */
     @CrossOrigin
     @PostMapping("/payments/newPayment")
-    public void guardarAbono(@RequestBody NewPayment newPayment){
+    public void savePayment(@RequestBody NewPayment newPayment) {
         savePayments.setNewPayment(newPayment);
     }
 
@@ -43,7 +46,7 @@ public class PaymentRestController {
      */
     @CrossOrigin
     @PostMapping("/payments/history")
-    public List<PaymentView> verAbonos(@RequestBody Patient patient){
-        return showPayments.porNombrePaciente(patient.getPatientName());
+    public List<PaymentView> getPayments(@RequestBody Patient patient) {
+        return showPayments.getPaymentsByPatientName(patient.getPatientName());
     }
 }
